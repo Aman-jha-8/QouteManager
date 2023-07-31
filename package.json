@@ -1,0 +1,29 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "project to handle and manage qoutes",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amanjha8503/QouteManager.git"
+  },
+  "author": "Aman Jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amanjha8503/QouteManager/issues"
+  },
+  "homepage": "https://github.com/Amanjha8503/QouteManager#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.5.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}

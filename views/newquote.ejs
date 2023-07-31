@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Great Quotes - New Quote</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+  /* ... your existing styles ... */
+.nav-link,.navbar-brand{
+    color:white;
+    display:inline-block;
+}
+
+  .bg-succes {
+background-color: #0e690e;
+color: aliceblue; /* Replace this color with the dark green shade you want */
+}
+
+.su{
+  background:#094009 ;
+  color: aliceblue;
+  margin: auto;
+  padding: 10px;
+}
+
+.form-group{
+  width: 88%;
+  margin: auto;
+}
+
+.form-control{
+  padding: 2px;
+  margin: auto;
+
+ .nav-link:hover,
+.navbar-brand:hover {
+  color: black; /* Change to the color that suits best for hover on white text */
+  transform: scale(1.1); /* Increase the size on hover */
+  transition: color 0.3s, transform 0.3s; /* Add a smooth transition effect */
+}
+
+}
+</style>
+<body>
+  <!-- ... your existing code ... -->
+  <nav class="navbar navbar-expand-md bg-succes ">
+    <a class="navbar-brand" href="/">Great Quotes</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">All Quotes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="new">New Quote</a>
+      </li>
+    </ul>
+  </nav>
+  </nav>
+  <div class="container mt-4">
+    <h2>Add New Quote</h2>
+    <form style="background: #3c973c;border-radius: 3cqh;" action="/new" method="post">
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input type="text" class="form-control" id="author" name="author" placeholder="Author's name" required>
+      </div>
+      <div class="form-group">
+        <label for="quote">Quote:</label>
+        <textarea class="form-control" id="quote" name="quote" placeholder="Author's Quote" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn su" id="addQuoteBtn">Add Quote</button>
+      </div>
+    </form>
+  </div>
+  <!-- ... your existing code ... -->
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+</body>
+</html>

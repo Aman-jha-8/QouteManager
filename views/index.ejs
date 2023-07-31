@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Great Quotes - All Quotes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<style>
+  /* ... your existing styles ... */
+.nav-link,.navbar-brand{
+    color:white;
+    display:inline-block;
+}
+
+  .bg-succes {
+  background-color: #0e690e;
+  color: aliceblue;
+  }
+
+  .nav-link:hover,
+.navbar-brand:hover {
+  color: black; /* Change to the color that suits best for hover on white text */
+  transform: scale(1.1); /* Increase the size on hover */
+  transition: color 0.3s, transform 0.3s; /* Add a smooth transition effect */
+}
+
+
+</style>
+<body>
+  <!-- ... your existing code ... -->
+  <nav class="navbar navbar-expand-md bg-succes ">
+    <a class="navbar-brand" href="/">Great Quotes</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">All Quotes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="new">New Quote</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container mt-4">
+    <h1>All Quotes</h1>
+    <div id="allQuotesPage">
+      <% quotes.forEach((quote, index) => { %>
+        <div class="row my-2 bg-info">
+          <div class="col-md-9 bxsh">
+            <h3><%= quote.quote %></h3>
+            <h3><%= quote.author %></h3>
+          </div>
+          <div class="col-md-3 d-flex align-items-center">
+            <a class="btn bg-succes" style="border-radius:30px;box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);" href="/specific/<%= quote.id %>">View My Full Quote</a>
+            <a class="btn btn-danger ml-2" style="border-radius:30px;box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);" href="/delete/<%= quote.id %>"><i class="fas fa-trash-alt"></i></a>
+             <a class="btn btn-primary ml-2" style="border-radius:30px;box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);" href="/edit/<%= quote.id %>"><i class="fas fa-pencil-alt"></i></a>
+          </div>
+        </div>
+      <% }); %>
+      <% if (quotes.length === 0) { %>
+        <p>No quotes available yet!</p>
+      <% } %>
+    </div>
+  </div>
+  <!-- ... your existing code ... -->
+</body>
+<!-- ... your existing code ... -->
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<!-- ... your existing code ... -->
+
+</html>

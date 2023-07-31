@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Great Quotes - Specific Quote</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+  /* ... your existing styles ... */
+.nav-link,.navbar-brand{
+    color:white;
+    display:inline-block;
+}
+
+  .bg-success {
+    background-color: #0e690e;
+    color: aliceblue;
+  }
+
+/* ... your existing styles ... */
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: black; /* Change to the color that suits best for hover on white text */
+  transform: scale(1.1); /* Increase the size on hover */
+  transition: color 0.3s, transform 0.3s; /* Add a smooth transition effect */
+}
+
+
+  body {
+    background-color: #f8f9fa; /* Light gray background color for the body */
+  }
+
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the navbar */
+  }
+
+  .container {
+    max-width: 800px; /* Limit the width of the content container for better readability */
+  }
+
+  .quote {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .quote h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:red;
+  }
+
+  .quote p {
+    font-size: 18px;
+    line-height: 1.6;
+    color:purple;
+  }
+
+  /* Center the quote on the page */
+  #specificQuotePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+  }
+
+</style>
+<body>
+  <!-- ... your existing code ... -->
+  <nav class="navbar navbar-expand-md bg-success">
+    <a class="navbar-brand" href="/">Great Quotes</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">All Quotes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../new">New Quote</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container mt-5">
+    <div id="specificQuotePage">
+      <div class="quote">
+        <h3><%= quote.author %></h3>
+        <p><em><%= quote.quote %></em></p>
+      </div>
+    </div>
+  </div>
+  <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

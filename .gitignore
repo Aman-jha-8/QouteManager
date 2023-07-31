@@ -1,0 +1,13 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore css directory inside public
+public/css/
+
+# Ignore js directory inside public
+public/js/
+
+# Ignore fontawesome-free directory inside public
+public/fontawesome-free/
+
+
